@@ -1,11 +1,5 @@
 # LilCMS
 
-## Bienvenidos a LilCMS, un CMS ligero, rápido y sin necesidad de bases de datos.
+## Bienvenidos a LilCMS, un CMS ligero, rápido.
 
 
-
-
-
-
-
-**Nota: No se debe utilizar para proyectos grandes**.
