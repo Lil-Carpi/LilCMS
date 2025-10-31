@@ -8,3 +8,6 @@ Note about the version:
 For example:
  - Status 2, update number 7: Version 0.2.7.
 
+---
+
+Nothing to see here yet.
