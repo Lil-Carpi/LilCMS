@@ -13,5 +13,5 @@ For example:
 # Version 0.1.1
 
 Note about this version:
-- Created "General Prupose AutoLoader (GPAL)"
-- Added "General Prupose LilPlantilla (GPLP)"
+- Created "General Prupose AutoLoader (GPAL)".
+- Added "General Prupose LilPlantilla (GPLP)" on /public.
