@@ -10,4 +10,8 @@ For example:
 
 ---
 
-Nothing to see here yet.
+# Version 0.1.1
+
+Note about this version:
+- Created "General Prupose AutoLoader (GPAL)"
+- Added "General Prupose LilPlantilla (GPLP)"
