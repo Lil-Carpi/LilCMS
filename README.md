@@ -9,7 +9,7 @@ btw, the Node version will be primary when I finish it...
 
 **Phase 1: Core foundations**
 
-- [ ] File structure and autoloader
+- [X] File structure and autoloader
 - [ ] Config manager (config.php with environment loader)
 - [ ] Basic routing system (GET/POST handler)
 - [ ] Error handler & logger
