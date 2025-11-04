@@ -1,6 +1,6 @@
 ## LilCMS Version 0.1.0
 
-Note about the version:
+Note about the versions:
   Versions goes like this:
 - Depends of the actual status of the project
 - Depends of the number of the update that it is
