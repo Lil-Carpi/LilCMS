@@ -9,9 +9,9 @@ For example:
  - Status 2, update number 7: Version 0.2.7.
 
 ---
+### Status
+# ON STANDBY
+Due to certain personal situations, this project will be on standby for a few months.
 
-# Version 0.1.1
-
-Note about this version:
-- Created "General Prupose AutoLoader (GPAL)".
-- Added "General Prupose LilPlantilla (GPLP)" on /public.
+Keep tuned for more news.
+    - Lil_Carpi
