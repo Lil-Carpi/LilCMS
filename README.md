@@ -1,9 +1,11 @@
 # LilCMS
 
 ## Welcome to **LilCMS**, a lightweight, fast and reliable CMS made from scratch!
-LilCMS is a personal project written in **PHP**.
-A Node.js version will come later once this one is done - same logic, new tech stack.
-btw, the Node version will be primary when I finish it...
+LilCMS is a personal project written in **Django, NGINX, JSVanilla, HTML5 and CSS. MariaDB** as a database.
+
+There will be an installer for Linux written in Bash.
+
+---
 
 ### Status
 # ON STANDBY
