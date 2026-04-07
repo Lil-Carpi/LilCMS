@@ -8,6 +8,12 @@ There will be an installer for Linux written in Bash.
 ---
 
 ### Status
+
+## LilCMS 0.1.1 RELEASED!
+Is just an experimental update! It contains PHP code and some credentials.
+Check ['CHANGELOG.md'](./CHANGELOG.md) for more info
+
+
 # ON STANDBY
 Due to certain personal situations, this project will be on standby for a few months.
 

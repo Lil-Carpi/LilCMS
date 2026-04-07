@@ -9,9 +9,12 @@ For example:
  - Status 2, update number 7: Version 0.2.7.
 
 ---
-### Status
-# ON STANDBY
-Due to certain personal situations, this project will be on standby for a few months.
+## LilCMS Version 0.1.1
+
+Changes:
+- Added a Login screen. It contains testing passwords, as IP addresses of my VMs. Just ignore them
+- Added a functional PHP backend. Yes, I know I said that it will be Django based, but is just for experimentation propuses.
+
 
 Keep tuned for more news.
     - Lil_Carpi
