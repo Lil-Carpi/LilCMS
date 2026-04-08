@@ -7,15 +7,16 @@ There will be an installer for Linux written in Bash.
 
 ---
 
-### Status
+# Status
 
-## LilCMS 0.1.1 RELEASED!
+## LilCMS 0.1.1 (Atomic Ant) RELEASED!
 Is just an experimental update! It contains PHP code and some credentials.
 Check ['CHANGELOG.md'](./CHANGELOG.md) for more info
 
-
-# ON STANDBY
-Due to certain personal situations, this project will be on standby for a few months.
+---
+## LilCMS 0.1.2 (Atomic Ant) RELEASED!
+Created a Django based login system based on the login system made on PHP from the 0.1.1 update.
+Check ['CHANGELOG.md'](./CHANGELOG.md) for more info
 
 Keep tuned for more news.
     - Lil_Carpi
