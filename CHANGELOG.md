@@ -8,7 +8,7 @@
 - **Minor update**: Represents the specific update or patch numbrer within that phase.
 *Example: Major update 0, Status 2, update number 7: Version 0.2.7.*
 ---
-## LilCMS (Atomic Ant) Version 0.1.1 - PHP Experimentation
+## LilCMS (Atomic Ant) Version 0.1.1 - PHP Experimentation (**DELETED**)
 
 **Added**:
 - Added a Login screen. It contains testing passwords, as IP addresses of my VMs. Just ignore them
