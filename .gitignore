@@ -1,0 +1,7 @@
+Login(django)/venv
+**venv/
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
