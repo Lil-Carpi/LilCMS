@@ -34,3 +34,13 @@ To run the project locally for now:
 
 ***Lil_Carpi***
 A very bored guy building his own tools instead of using others... Why not?
+
+---
+## License
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+**LilCMS** and its derivatives are licensed under the **GNU Affero General Public License v3.0**.
+
+You are free to use, study, modify, and distribute this software. However, if you modify it and provide access to the modified version over a network (e.g., hosting it as a service), you are required to make your modified source code available to your users under the same AGPLv3 license.
+
+See the [LICENSE](LICENSE) file for more details.
