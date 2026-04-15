@@ -1,15 +1,131 @@
-body
-{
-    background-color: darkblue;
+/* =========================================
+   LIL-HIG (Variables and base structure)
+   ========================================= */
+:root {
+    /* MODO CLARO (Default) */
+    --bg-app: #f5f5f7;        
+    --bg-surface: #ffffff;    
+    --bg-header: rgba(255, 255, 255, 0.8); 
+    
+    --text-main: #1d1d1f;
+    --text-muted: #86868b;
+    --border-color: rgba(0, 0, 0, 0.08);
+    
+    --accent: #3584e4;        
+    --accent-hover: #1c71d8;
+    --danger: #e01b24;        
+    
+    --radius-window: 12px;
+    --radius-card: 16px;
+    --radius-btn: 8px;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Reset Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* =========================================
+   LOGIN VIEW 
+   ========================================= */
+.login-wrapper {
+    /* border: solid 5px red;  <-- this was for debuggin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    width: 100%;
+    background: radial-gradient(circle at 50% -20%, rgba(53, 132, 228, 0.15), transparent 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.login-card {
+    background-color: var(--bg-header); 
+    backdrop-filter: blur(20px);        
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.login-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.login-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-btn);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(53, 132, 228, 0.25); 
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: var(--radius-btn);
+    background-color: var(--accent);
     color: white;
-    padding: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 1rem;
 }
-.formGroup
-{
-    margin-bottom: 15px;
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
 }
-#message
-{
-    font-weight: bold;
-    margin-top: 15px;
+
+.btn-primary:active {
+    transform: scale(0.98);
 }
