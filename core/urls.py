@@ -19,7 +19,9 @@ from django.urls import path
 from api import views
 
 urlpatterns = [
-    path('api/login/', views.api_login),
-    path('api/userdata/', views.api_userdata),
-    path('api/logout', views.api_logout),
+    path('', views.login_view, name='login'),
+
+    #('api/login/', views.api_login),
+    #path('api/userdata/', views.api_userdata),
+    #path('api/logout', views.api_logout),
 ]
