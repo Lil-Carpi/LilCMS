@@ -1,34 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Carpi's Basement · Login</title>
-    <script src="assets/js/login.js" defer></script>
-</head>
-    <header>
-        <nav>
-            <h1>Carpi's Basement</h1>
-            <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">News</a></li>
-            </ul>
-        </nav>
-    </header>
-<body>
-    <h2>Login - Carpi's Basement</h2>
-    <form id="loginForm">
-        <div class="formGroup">
-            <input type="email" id="email" placeholder="Tu correo" required>
+{% extends 'base.html' %}
+{% block title %}Login - LilCMS{% endblock %}
+{% block content %}
+<div class="login-wrapper">
+    <div class="login-card">
+        <div class="login-header">
+            <h1>LilCMS</h1>
+            <p>Welcome back!</p>
         </div>
-        <div class="formGroup">
-            <input type="password" id="password" placeholder="Tu contraseña" required>
-        </div>
-        <button type="submit">Entrar</button>
-    </form>
+        <form action="" method="post">
+            {% csrf_token %}
 
-    <p id="mensaje"></p>
-</body>
-</html>
+            {% if error_message %}
+            <div style="color:var(--danger); font-size: 0.9rem; margin-bottom: 1rem; font-weight: 600;">
+                {{ error_message }}
+            </div>
+            {% endif %}
+            <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="admin@lilcms.com" required autocomplete="email">
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="········" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,58 +1,62 @@
-import json
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from .models import Usuario
+from django.shortcuts import render, redirect
+from django.apps import apps
+import mariadb
 
-@csrf_exempt
-def api_login(request):
+def connection():
+    conn = mariadb.connect(
+        user="carpi",
+        password="supersegura20000",
+        host="192.168.56.101",
+        port=3306,
+        database="logintest")
+    return conn
+
+
+def users(request):
+    if 'usuario_id' in request.session:
+        return redirect('admin')
+
+    conn = connection()
+    cursor = conn.cursor()
+
+    
     if request.method == 'POST':
-        datos = json.loads(request.body)
-        email = datos.get('email')
-        password = datos.get('password')
+        email_ingresado = request.POST.get('email')
+        password_ingresada = request.POST.get('password')
 
-        try:
-            usuario = Usuario.objects.get(email=email)
+        cursor.execute('SELECT * FROM usuarios WHERE email=? AND password=?', (email_ingresado, password_ingresada))
+        user = cursor.fetchone() 
 
-            if usuario.password == password:
-                request.session['usuario_logueado'] = usuario.email
+        if user:
+            request.session['usuario_id'] = user[0] 
+            conn.close()
+            return redirect('admin')
+        else:
+            error_message = "Correo o contraseña incorrectos."
+            users_list = []
+            cursor.execute('SELECT * FROM usuarios')
+            for row in cursor.fetchall():
+                users_list.append({"id": row[0], "nombre": row[1], "email": row[2], "password": row[3]})
+            conn.close()
+            return render(request, 'login.html', {'users': users_list, 'error_message': error_message})
+    else:
+        users_list = []
+        cursor.execute('SELECT * FROM usuarios')
+        for row in cursor.fetchall():
+            users_list.append({"id": row[0], "nombre": row[1], "email": row[2], "password": row[3]})
+        conn.close()
+        
+        return render(request, 'login.html', {'users': users_list})
 
-                return JsonResponse({
-                    "success": True,
-                    "message": f"Bienvenido a LilCMS, {usuario.nombre}",
-                    "home": "/dashboard/index.html"
-                })
-            else:
-                return JsonResponse({
-                    "success": False,
-                    "message": "Usuario o contraseña incorrectos. Intentelo de nuevo."
-                })
-        except Usuario.DoesNotExist:
-            return JsonResponse({
-                "success": False,
-                "message": "Este usuario no existe. Contacte con el administrador del sitio."
-            })
-
-def api_userdata(request):
-    email_sesion = request.session.get('usuario_logueado')
-
-    if not email_sesion:
-        return JsonResponse({
-            "success": False,
-            "Message": "No autorizado. Hey, no deberías estar aquí >:("
-        }, status=401)
-
-    usuario = Usuario.objects.get(email=email_sesion)
-    return JsonResponse({
-        "success": True,
-        "data": {
-            "nombre": usuario.nombre,
-            "email": usuario.email
-        }
-    })
-
-def api_logout(request):
+def logout_view(request):
     request.session.flush()
-    return JsonResponse({
-        "success": True,
-        "message": "Sesión cerrada. Vuelva pronto :D"
-    })
+    return redirect('login')
+
+
+def login_view(request):
+    return render(request, 'login.html')
+
+def admin_view(request):
+    if 'usuario_id' not in request.session:
+        return redirect('login')
+    return render(request, 'dashboard/admin.html')
