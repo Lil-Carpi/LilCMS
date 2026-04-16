@@ -28,6 +28,38 @@
 
 }
 
+/* =========================================
+   HIG DARK
+   ========================================= */
+body.dark-mode { 
+    --bg-app: #1e1e1e;          
+    --bg-surface: #2d2d2d;      
+    --bg-header: rgba(45, 45, 45, 0.8); 
+    
+    --text-main: #f5f5f7;       
+    --text-white: #f5f5f7;      
+    --text-muted: #a1a1a6;      
+    --border-color: rgba(255, 255, 255, 0.1); 
+    
+    --glass-bg: rgba(45, 45, 45, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --shadow-base: rgba(0, 0, 0, 0.5);
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#dl-mode { 
+    cursor: pointer;
+    font-style: normal;
+    font-size: 1.2rem;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+#dl-mode:hover {
+    transform: scale(1.2);
+}
+
+
 /* Reset Base */
 * {
     margin: 0;
@@ -235,9 +267,6 @@ body {
     gap: 1em;
     grid-auto-rows: minmax(350px, auto);
 }
-.metric:hover {
-    color: var(--danger);
-}
 
 .metric {
     background-color: var(--bg-surface);
@@ -266,7 +295,6 @@ body {
 }
 
 .metric-content { 
-    background-color: aqua;
     flex-grow: 1;
 }
 
