@@ -8,6 +8,7 @@
     --bg-header: rgba(255, 255, 255, 0.8); 
     
     --text-main: #1d1d1f;
+    --text-white: #f5f5f7;
     --text-muted: #86868b;
     --border-color: rgba(0, 0, 0, 0.08);
     
@@ -19,6 +20,12 @@
     --radius-card: 16px;
     --radius-btn: 8px;
     --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+
+    /* Cristal difuminado*/
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.01);
+    --shadow-base: rgba(0, 0, 0, 0.2);
+
 }
 
 /* Reset Base */
@@ -30,10 +37,12 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-    background-color: var(--bg-app);
+    background: var(--bg-app);
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
+    list-style: none;
+    text-decoration: none;
 }
 
 /* =========================================
@@ -108,6 +117,8 @@ body {
     box-shadow: 0 0 0 3px rgba(53, 132, 228, 0.25); 
 }
 
+/*Buttons*/
+
 .btn-primary {
     width: 100%;
     padding: 0.85rem;
@@ -122,10 +133,156 @@ body {
     margin-top: 1rem;
 }
 
+.btn-rounded {
+    background: var(--accent);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--shadow-base);
+    color: var(--text-white) !important;
+}
+
 .btn-primary:hover {
     background-color: var(--accent-hover);
 }
 
 .btn-primary:active {
     transform: scale(0.98);
+}
+
+.btn-rounded:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   Navbar
+   ========================================= */
+
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--shadow-base);
+}
+
+.navbar {
+    
+    display: flex;
+    position: fixed;
+    top: 0.2rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.navbar a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links{
+    
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+    border-radius: 30px;
+    padding: 1rem;
+}
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.logo-container{
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+/* =========================================
+   Dashboard View
+   ========================================= */
+ .main {
+    margin: 6rem 3rem;
+}
+
+.dashboard-content {
+
+    border: 0.01px solid transparent;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft); 
+}
+.main-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 7rem 2rem 1rem;
+    letter-spacing: -1px;
+}
+
+.metric-wrapper {
+    padding :10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    grid-auto-rows: minmax(350px, auto);
+}
+.metric:hover {
+    color: var(--danger);
+}
+
+.metric {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft); 
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: rgba(53, 132, 228, 0.4);
+}
+
+.metric-bar h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.metric-content { 
+    background-color: aqua;
+    flex-grow: 1;
+}
+
+.metric-content ul {
+    list-style: none;
+    padding-left: 1rem ;
+}
+
+.metric-content li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+.metric-content a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
 }
