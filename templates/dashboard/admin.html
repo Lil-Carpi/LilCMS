@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard - LilCMS{% endblock %}
+{% block content %}
+
+<header>
+    <nav class="navbar">
+        <div class="logo-container glass">
+            <a href="#">LilCMS - Dashboard</a>
+        </div>
+        <div class="nav-actions">
+            <ul class="nav-links glass">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Edit on HTML</a></li>
+                <li><a href="#">View Details</a></li>
+                <li><a href="#">Status</a></li>
+            </ul>
+            <ul class="nav-links btn-rounded">
+                <li><a href="#">Publish changes</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="main">
+    <div class="main-title">
+        <h1>
+            Dashboard - LilCMS
+        </h1>
+    </div>
+    <div class="dashboard-content">
+        <div class="metric-wrapper">
+            <div class="metric" >
+                <div class="metric-bar">
+                    <h3>Pages</h3>
+                </div>
+                <div class="metric-content">
+                    <ul>
+                        <li><a href="#" class="metric-title">How to commit </a>
+                            <p class="metric-text">· by Lil_Carpi</p>
+                        </li>
+                        <li><a href="#" class="metric-title">How to configure a NFS server </a>
+                            <p class="metric-text-small">· By Lil_Carpi</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="metric">
+                <div class="metric-bar">
+                    <h3>Visitors</h3>
+                </div>
+                <div class="metric-content">
+                    <ul>
+                        <li>
+                            <p class="metric-text-medium">Unregistered: 34 visits</p>
+                        </li>
+                        <li>
+                            <p class="metric-text-medium">New users: 3 visits</p>
+                        </li>
+                        <li>
+                            <p class="metric-text-medium">Registered users: 56 visits</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="metric" >
+                <div class="metric-bar">
+                    <h3>Recent comments</h3>
+                </div>
+                <div class="metric-content">
+                    <ul>
+                        <li>
+                            <p class="metric-text-medium"></p><a href="" class="metric-text-medium">Jonh Doe
+                            </a>commented in <a href="#"> How to commit</a>: Nice tutorial dude!</p>
+                        </li>
+                        <li>
+                            <p class="metric-text-medium"></p><a href="#" class="metric-text-medium">Annie </a>commented
+                            in <a href="#"> How to commit</a>: It will depend on your company. A well written tutorial
+                            btw.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="metric" >
+                <div class="metric-bar">
+                    <h3>Pick up where you left off</h3>
+                </div>
+                <div class="metric-content">
+                    <ul>
+                        <li>
+                            <p class="metric-text-medium">You started today: </p><a href="#">Is Django a good backend
+                                alternative?</a>
+                        </li>
+                        <li>
+                            <p class="metric-text-medium">You started 3 days ago: </p><a href="#">How to set up a
+                                Raspberry Pi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -20,6 +20,7 @@ from api import views
 
 urlpatterns = [
     path('', views.login_view, name='login'),
+    path('dashboard/', views.admin_view, name="admin"),
 
     #('api/login/', views.api_login),
     #path('api/userdata/', views.api_userdata),
