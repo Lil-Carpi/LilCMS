@@ -1,8 +1,4 @@
-# LilCMS
-
-> A lightweight, fast and reliable CMS (Content Management System) made from scratch!
-
-LilCMS is a personal project written in **Django, NGINX, JSVanilla, HTML5 and CSS. MariaDB** as a database.
+Project written in **Django, NGINX, JSVanilla, HTML5 and CSS. MariaDB** as a database.
 
 *(Upcoming: An automated installer for Linux written in Bash).*
 
