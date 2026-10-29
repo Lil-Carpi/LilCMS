@@ -6,6 +6,7 @@ LilCMS is a personal project written in **Django, NGINX, JSVanilla, HTML5 and CS
 
 *(Upcoming: An automated installer for Linux written in Bash).*
 
+> Possible changes to PHP
 ---
 
 # Status
